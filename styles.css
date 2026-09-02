@@ -242,43 +242,13 @@ a:hover {
 
 .logo-img--main {
     opacity: 1;
-    animation: logoFlipMain 2.2s ease-in-out infinite;
 }
 
 .logo-img--alt {
     opacity: 0;
-    animation: logoFlipAlt 2.2s ease-in-out infinite;
 }
 
-@keyframes logoFlipMain {
-    0%, 45% {
-        opacity: 1;
-        transform: rotateY(0deg) scale(1) translateX(0);
-    }
-    50% {
-        opacity: 0;
-        transform: rotateY(180deg) scale(0.85) translateX(8px);
-    }
-    100% {
-        opacity: 0;
-        transform: rotateY(180deg) scale(0.85) translateX(8px);
-    }
-}
 
-@keyframes logoFlipAlt {
-    0%, 45% {
-        opacity: 0;
-        transform: rotateY(-180deg) scale(0.85) translateX(-8px);
-    }
-    50% {
-        opacity: 1;
-        transform: rotateY(0deg) scale(1) translateX(0);
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0deg) scale(1) translateX(0);
-    }
-}
 
 @keyframes rotate {
     from { transform: rotate(0deg); }
