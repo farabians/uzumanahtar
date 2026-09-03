@@ -21,14 +21,15 @@ function initMobileMenu() {
     if (!menuToggle || !navLinks) return;
 
     menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        
+        const isOpen = navLinks.classList.toggle('active');
+        this.classList.toggle('active', isOpen);
+
         // Animate hamburger menu
         const spans = this.querySelectorAll('span');
-        if (navLinks.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
+        if (isOpen) {
+            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)';
+            spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
         } else {
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
@@ -41,6 +42,7 @@ function initMobileMenu() {
     navItems.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
             const spans = menuToggle.querySelectorAll('span');
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';

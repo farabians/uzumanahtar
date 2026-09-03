@@ -309,6 +309,19 @@ a:hover {
     background: var(--color-white);
     border-radius: 2px;
     transition: all var(--transition-speed);
+    transform-origin: center;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ===================================
@@ -1183,6 +1196,10 @@ a:hover {
         display: none;
     }
 
+    .hero {
+        padding-top: 110px;
+    }
+
     .hero-title {
         font-size: 32px;
     }
@@ -1191,12 +1208,33 @@ a:hover {
         font-size: 16px;
     }
 
-    .hero-buttons {
+    .hero-buttons,
+    .emergency-buttons {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn,
+    .emergency-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
     }
 
     .hero-stats {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        align-items: start;
+    }
+
+    .stat {
+        align-items: center;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 24px;
     }
 
     .section-title {
@@ -1233,8 +1271,14 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+
     .hero-title {
-        font-size: 24px;
+        font-size: 26px;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
@@ -1252,15 +1296,18 @@ a:hover {
     .btn {
         padding: 12px 20px;
         font-size: 14px;
+        white-space: normal;
     }
 
     .service-card,
-    .advantage-card {
+    .advantage-card,
+    .testimonial-card,
+    .info-card {
         padding: 25px 15px;
     }
 
     .hero-stats {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -1270,6 +1317,11 @@ a:hover {
 
     .map-container iframe {
         height: 250px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
     }
 }
 
