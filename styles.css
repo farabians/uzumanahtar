@@ -1133,6 +1133,16 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    .nav-wrapper {
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .menu-toggle {
         display: flex;
     }
