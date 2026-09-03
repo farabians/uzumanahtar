@@ -124,7 +124,7 @@ function initFormSubmit() {
 
         // WhatsApp message format
         const whatsappMessage = `Merhaba, İsim: ${name}%0ATelefon: ${phone}%0AE-mail: ${email}%0AMesaj: ${message}`;
-        const whatsappUrl = `https://wa.me/905551234567?text=${whatsappMessage}`;
+        const whatsappUrl = `https://wa.me/905423675042?text=${whatsappMessage}`;
 
         // Reset form
         this.reset();
@@ -259,7 +259,7 @@ document.addEventListener('keydown', function(e) {
     // Quick call on Ctrl+K
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        window.location.href = 'tel:+905551234567';
+        window.location.href = 'tel:+905423675042';
     }
     // Close mobile menu on ESC
     if (e.key === 'Escape') {
