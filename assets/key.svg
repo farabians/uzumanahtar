@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
   <title>Anahtar</title>
-  <path fill="#ea1a2d" d="M41 5a18 18 0 0 0-14.7 28.4L5 54.7V59h4.3l4-4H18v-5h5v-5h5l2.1-2.1A18 18 0 1 0 41 5Zm0 8a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
+  <g fill="none" stroke="#ea1a2d" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="28" cy="28" r="18" stroke-width="9"/>
+    <circle cx="28" cy="28" r="5" fill="#ea1a2d" stroke="none"/>
+    <path stroke-width="10" d="M41 41 82 82"/>
+    <path stroke-width="9" d="m68 68 8-8m-1 23 8-8"/>
+  </g>
 </svg>
