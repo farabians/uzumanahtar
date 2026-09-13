@@ -637,6 +637,63 @@ a:hover {
     transition: transform var(--transition-speed);
 }
 
+@keyframes serviceClock {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes serviceSpeed {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+        filter: drop-shadow(0 0 3px rgba(249, 115, 22, 0.25));
+    }
+    35% {
+        transform: translateX(5px) scale(1.08);
+        filter: drop-shadow(0 0 12px rgba(249, 115, 22, 0.8));
+    }
+    70% {
+        transform: translateX(-3px) scale(1);
+        filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.45));
+    }
+}
+
+@keyframes serviceCheck {
+    0%, 100% { transform: scale(1); }
+    45% { transform: scale(1.16); }
+    65% { transform: scale(0.96); }
+}
+
+@keyframes servicePrice {
+    0%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(12deg); }
+    60% { transform: rotate(-8deg); }
+}
+
+@keyframes serviceTeam {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.advantage-card:nth-child(1) .advantage-icon {
+    animation: serviceClock 5s linear infinite;
+}
+
+.advantage-card:nth-child(2) .advantage-icon {
+    animation: serviceSpeed 1.4s ease-in-out infinite;
+}
+
+.advantage-card:nth-child(3) .advantage-icon {
+    animation: serviceCheck 2s ease-in-out infinite;
+}
+
+.advantage-card:nth-child(4) .advantage-icon {
+    animation: servicePrice 2.4s ease-in-out infinite;
+}
+
+.advantage-card:nth-child(5) .advantage-icon {
+    animation: serviceTeam 2.2s ease-in-out infinite;
+}
+
 /* Renkli İkonlar */
 .advantage-card:nth-child(1) .advantage-icon {
     color: #7c3aed;
@@ -660,6 +717,12 @@ a:hover {
 
 .advantage-card:hover .advantage-icon {
     transform: scale(1.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .advantage-card .advantage-icon {
+        animation: none;
+    }
 }
 
 .advantage-card h3 {
