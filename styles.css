@@ -885,6 +885,44 @@ a:hover {
     color: var(--color-white);
 }
 
+.local-page {
+    min-height: 100vh;
+    padding: 90px 0;
+    background: var(--color-black);
+}
+
+.local-page h1 {
+    max-width: 800px;
+    margin: 35px 0 20px;
+    color: var(--color-white);
+    font-size: clamp(34px, 5vw, 62px);
+}
+
+.local-page h2 {
+    margin-top: 42px;
+    color: var(--color-white);
+}
+
+.local-page p,
+.local-page li {
+    max-width: 850px;
+    color: var(--color-text);
+}
+
+.local-lead {
+    font-size: 20px;
+}
+
+.local-page ul {
+    max-width: 850px;
+    padding-left: 22px;
+    line-height: 2;
+}
+
+.local-page .btn {
+    margin-top: 25px;
+}
+
 /* ===================================
    TESTIMONIALS SECTION
    =================================== */
